@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>randomGo</title>
+    <style>
+      * {
+        --primary-color: #243642;
+        --text: #e2f1e7;
+        --complementry: #387478;
+        --text: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="max-w-screen h-screen bg-[#243642] text-[#ffffff] px-2 py-4">
+    <div id="app" class="w-full max-w-lg min-h-full flex flex-col mx-auto">
+      <div
+        id="controls"
+        class="flex-grow flex flex-col justify-center space-y-4"
+      >
+        <div
+          id="control-1"
+          class="control-elm bg-[#387478] w-full p-2 flex flex-col rounded-lg"
+        >
+          <label
+            for="go-count"
+            class="text-lg font-bold capitalize p-2 self-end"
+            >go count: <span>5</span></label
+          >
+          <input
+            type="range"
+            id="go-count"
+            min="5"
+            max="50"
+            value="5"
+            class="flex-grow"
+          />
+        </div>
+        <div
+          id="control-2"
+          class="control-elm bg-[#387478] w-full p-2 flex flex-col rounded-lg"
+        >
+          <label
+            for="go-min-duration"
+            class="text-lg font-bold capitalize p-2 self-end"
+            >go min duration: <span>2</span>s.</label
+          >
+          <input
+            type="range"
+            id="go-min duration"
+            min="2"
+            max="10"
+            value="2"
+            class="flex-grow"
+          />
+        </div>
+        <div
+          id="control-3"
+          class="control-elm bg-[#387478] w-full p-2 flex flex-col rounded-lg"
+        >
+          <label
+            for="go-max-duration"
+            class="text-lg font-bold capitalize p-2 self-end"
+            >go max duration: <span>8</span>s.</label
+          >
+          <input
+            type="range"
+            id="go-max duration"
+            min="4"
+            max="30"
+            value="8"
+            class="flex-grow"
+          />
+        </div>
+      </div>
+      <button
+        id="start-button"
+        class="size-20 rounded-full bg-[#387478] text-[#ffffff] border-2 uppercase font-bold mt-10 mb-20 self-center active:bg-[#243642]"
+      >
+        start
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
